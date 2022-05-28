@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home';
 import FavoriteList from './components/FavoriteList';
-import Add from './components/Add';
+import Add from './components/Add/Add';
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<FavoriteList />} />
-        <Route path="/" element={<Add />} />
+        <Route path="/favoritelist" element={<FavoriteList />} />
+        <Route path="/add" element={<Add />} />
       </Routes>
     </div>
   );
