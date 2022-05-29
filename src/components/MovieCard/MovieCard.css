@@ -1,5 +1,9 @@
-.movie__card {
+.movie__container {
     margin-top: 30px;
+}
+
+.movie__card {
+
 }
 
 .header {
@@ -14,4 +18,9 @@
     padding: 16px;
     margin-top: 5px;
     cursor: pointer;
+}
+
+.btn:disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }

@@ -5,11 +5,11 @@
 // we dispatch the type that passes to a reducer 
 export default (state, action) => {
     switch (action.type) {
-        case "ADD_MOVIE_TO_HOME":
+        case "ADD_MOVIE_TO_FAVORITELIST":
             return {
                 ...state,
                 // it adds movie to the array of existing movies
-                home: [action.payload, ...state.home]
+                favoritelist: [action.payload, ...state.favoritelist]
             }
         default: 
           return state

@@ -1,5 +1,6 @@
 .search {
- margin-left: 50px;
+ margin-left: 250px;
+ margin-right: 250px;
 }
 
 .input__container {
@@ -14,7 +15,7 @@ ul {
 input {
     background-color: pink;
     height: 50px;
-    width: 400px;
+    width: 100%;
     border: none;
     border-radius: 5px;
     text-indent: 10px;

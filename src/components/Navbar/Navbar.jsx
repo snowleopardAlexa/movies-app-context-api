@@ -8,10 +8,10 @@ const Navbar = () => {
          <div className="menu">
              <ul className="menu-items">
                  <li>
-                     <Link to="/" className="link">Home</Link>
+                     <Link to="/" className="link">Favorite List</Link>
                  </li>
                  <li>
-                     <Link to="/favoritelist" className="link">Favorite List</Link>
+                     <Link to="/watched" className="link">Watched</Link>
                  </li>
                  <li>
                      <Link to="/add" className="link">Add</Link>
