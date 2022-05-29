@@ -19,9 +19,12 @@ const MovieCard = ({ movie }) => {
              <h3 className="title">{movie.title}</h3>
              <h4 className="release-date">
                {/* check for error in release date  */}  
-              {movie.release_date ? movie.release_date.substring(0, 4) : "-" }
+              {movie.release_date ? movie.release_date.substring(0, 4) : "Not Disclosed" }
             
             </h4>
+         </div>
+         <div className="favorite">
+          <button className="btn">Add to Favorites</button>
          </div>
       </div>
     </div>
