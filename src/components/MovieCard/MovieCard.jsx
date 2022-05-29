@@ -2,7 +2,6 @@ import MovieControls from '../MovieControls/MovieControls'
 import './MovieCard.css'
 
 
-
 const MovieCard = ({ movie, type }) => {
   return (
     <div className="movie__card">

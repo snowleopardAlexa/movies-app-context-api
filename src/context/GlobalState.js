@@ -44,8 +44,8 @@ export const GlobalProvider = (props) => {
       value={{
         favoritelist: state.favoritelist,
         watched: state.watched,
-        addMovieToFavoritelist: addMovieToFavoritelist,
-        removeMovieFromFavoritelist: removeMovieFromFavoritelist
+        addMovieToFavoritelist,
+        removeMovieFromFavoritelist
       }}
     >
       {props.children}
