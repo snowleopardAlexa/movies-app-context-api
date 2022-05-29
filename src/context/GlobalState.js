@@ -23,11 +23,19 @@ export const GlobalProvider = (props) => {
    localStorage.setItem('watched', JSON.stringify(state.watched))
   }, [state])
 
-  // actions
+  // ACTIONS 
   // capital letter good practice
+
+  // add movie 
   const addMovieToFavoritelist = (movie) => {
-    dispatch({ type: "ADD_MOVIE_TO_FAVORITELIST", payload: movie });
+    dispatch({ type: "ADD_MOVIE_TO_FAVORITELIST", payload: movie })
   };
+
+  // remove movie 
+  const removeMovieFromFavoritelist = (id) => {
+      dispatch({ type: "REMOVE_MOVIE_FROM_FAVORITELIST", payload: id})
+  }
+
 
   // we can access global context from every component in the app
   // thanks to props.children
@@ -37,6 +45,7 @@ export const GlobalProvider = (props) => {
         favoritelist: state.favoritelist,
         watched: state.watched,
         addMovieToFavoritelist: addMovieToFavoritelist,
+        removeMovieFromFavoritelist: removeMovieFromFavoritelist
       }}
     >
       {props.children}
