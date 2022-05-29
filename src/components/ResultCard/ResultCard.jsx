@@ -1,9 +1,9 @@
-import "./MovieCard.css";
+import "./ResultCard.css";
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 
 // pass movie object as props so we can access it by destructuring
-const MovieCard = ({ movie }) => {
+const ResultCard = ({ movie }) => {
   // access to add movie that we created in context
   const { addMovieToFavoritelist, favoritelist } = useContext(GlobalContext);
 
@@ -14,8 +14,8 @@ const MovieCard = ({ movie }) => {
   const favoritelistDisabled = storedMovie ? true : false;
 
   return (
-    <div className="movie__container">
-      <div className="movie__card">
+    <div className="result__container">
+      <div className="result__card">
       <div className="poster__wrapper">
         {movie.poster_path ? (
           // backticks with temple literals
@@ -54,4 +54,4 @@ const MovieCard = ({ movie }) => {
   );
 };
 
-export default MovieCard;
+export default ResultCard;
