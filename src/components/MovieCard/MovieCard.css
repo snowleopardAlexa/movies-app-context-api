@@ -1,16 +1,4 @@
 .movie__card {
-    margin-top: 30px;
-}
-
-.header {
-    margin-top: 20px;
-    line-height: 25px;
-}
-
-.btn {
-    background-color: blueviolet;
-    color: white;
-    border: none;
-    padding: 16px;
-    margin-top: 5px;
+    display: flex;
+    justify-content: center;
 }

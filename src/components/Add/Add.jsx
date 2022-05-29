@@ -1,6 +1,6 @@
 import "./Add.css";
 import { useState } from "react";
-import MovieCard from "../MovieCard/MovieCard";
+import MovieCard from "../ResultCard/ResultCard";
 
 const Add = () => {
   const [query, setQuery] = useState("")
