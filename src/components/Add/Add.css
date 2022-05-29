@@ -1,0 +1,25 @@
+.search {
+ margin-left: 50px;
+}
+
+.input__container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input {
+    background-color: pink;
+    height: 50px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    text-indent: 10px;
+}
+
+input::placeholder {
+    color: rgb(12, 12, 12);
+}
