@@ -1,5 +1,7 @@
+import './FavoriteList.css'
 import { useContext } from 'react'
-import { GlobalContext } from '../context/GlobalState'
+import { GlobalContext } from '../../context/GlobalState'
+import MovieCard from '../MovieCard/MovieCard'
 
 const FavoriteList = () => {
 const { favoritelist } = useContext(GlobalContext)
@@ -9,10 +11,10 @@ const { favoritelist } = useContext(GlobalContext)
     <div className="header">
       <h2 style={{textAlign: 'center'}}>Favorite List</h2>
     </div>  
-    <div>
-      {favoritelist.map((movie) => (
-        <h1>{movie.title}</h1>
-      ))}
+    <div className="movie__grid">
+     {favoritelist.map((movie) => (
+       <MovieCard movie={movie} type="favoritelist" />
+     ))}
     </div>
     </div>
   )
