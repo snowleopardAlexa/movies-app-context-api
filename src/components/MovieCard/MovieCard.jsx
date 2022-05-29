@@ -1,8 +1,11 @@
 import './MovieCard.css'
-import React from 'react'
+import { useContext } from 'react'
+import { GlobalContext } from '../../context/GlobalState'
 
 // pass movie object as props so we can access it by destructuring
 const MovieCard = ({ movie }) => {
+  // access to add movie that we created in context   
+  const { addMovieToHome } = useContext(GlobalContext) 
   return (
     <div className="movie__card">
       <div className="poster__wrapper">
@@ -24,7 +27,8 @@ const MovieCard = ({ movie }) => {
             </h4>
          </div>
          <div className="favorite">
-          <button className="btn">Add to Favorites</button>
+          {/* trigger add movie to home on btn - send movie object accessed in the props */}
+          <button className="btn" onClick={() => addMovieToHome(movie)}>Add to Favorites</button>
          </div>
       </div>
     </div>
