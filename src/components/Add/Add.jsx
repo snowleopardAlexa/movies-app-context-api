@@ -1,6 +1,6 @@
 import "./Add.css";
 import { useState } from "react";
-//import MovieCard from "../MovieCard/MovieCard";
+import MovieCard from "../MovieCard/MovieCard";
 
 const Add = () => {
   const [query, setQuery] = useState("")
@@ -42,8 +42,9 @@ const Add = () => {
       {results.length > 0 && (
         <ul className="results">
           {results.map(movie => (
-            <li>
-              {movie.title}
+            // unique movie id, pass movie prop
+            <li key={movie.id}>
+             <MovieCard movie={movie} />
             </li>
           ))}
         </ul>

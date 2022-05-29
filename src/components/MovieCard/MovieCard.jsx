@@ -1,8 +1,26 @@
+import './MovieCard.css'
 import React from 'react'
 
-const MovieCard = () => {
+// pass movie object as props so we can access it by destructuring
+const MovieCard = ({ movie }) => {
   return (
-    <div>MovieCard</div>
+    <div className="movie__card">
+      <div className="poster__wrapper">
+        {movie.poster_path ? (
+            // backticks with temple literals
+            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} Poster`} />
+        // if there is no poster     
+        ) : (
+          <div className="fake__poster"></div>
+        )}
+      </div>
+      <div className="info">
+         <div className="header">
+             <h3 className="title">{movie.title}</h3>
+             <h4 className="release-date">{movie.release_date}</h4>
+         </div>
+      </div>
+    </div>
   )
 }
 

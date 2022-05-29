@@ -1,10 +1,14 @@
 .search {
-    display: flex;
-    justify-content: center;
+ margin-left: 50px;
 }
 
 .input__container {
     margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 input {
