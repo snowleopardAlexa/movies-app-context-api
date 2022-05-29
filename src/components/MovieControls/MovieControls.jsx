@@ -4,12 +4,12 @@ import { useContext } from 'react'
 import { GlobalContext } from '../../context/GlobalState'
 
 const MovieControls = ({ movie, type }) => {
-  const { removeMovieFromFavoritelist } = useContext(GlobalContext)
+  const { removeMovieFromFavoritelist, addMovieToWatched } = useContext(GlobalContext)
   return (
     <div className="card__controls">
       {type === 'favoritelist' && (
           <>
-            <button className="control-btn">
+            <button className="control-btn" onClick={() => addMovieToWatched(movie)}>
               <AiFillEye />
             </button>
             <button className="control-btn" onClick={() => removeMovieFromFavoritelist(movie.id)}>
