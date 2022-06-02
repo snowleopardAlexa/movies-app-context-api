@@ -1,0 +1,16 @@
+.card-controls {
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 3px;
+}
+  
+  .control-btn {
+    background-color: pink;
+    border: 1px solid rgb(182, 179, 179);
+    font-size: 1.25rem;
+    padding: 5px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
