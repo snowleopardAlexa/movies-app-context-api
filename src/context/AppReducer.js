@@ -27,6 +27,19 @@ export default (state, action) => {
             ),
             watched: [action.payload, ...state.watched],
         }  
+    case "MOVE_TO_FAVORITELIST":
+        return {
+            ...state,
+            // remove movie from watched
+            watched: state.watched.filter(movie => movie.id !== action.payload.id),
+            // adding movie back to favoritelist
+            favoritelist: [action.payload, ...state.favoritelist]
+        }
+    case "REMOVE_FROM_WATCHED":
+        return {
+            ...state,
+            watched: state.watched.filter(movie => movie.id !== action.payload)
+        }    
     default:
       return state;
   }
